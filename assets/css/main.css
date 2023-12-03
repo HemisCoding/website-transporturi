@@ -65,15 +65,33 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
-.video-container {
-    width: 100%; /* sau orice altă lățime */
-    height: auto; /* pentru păstrarea proporției videoclipului */
-    position: relative; /* dacă este necesar pentru poziționarea în pagina */
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
-video {
-    width: 100%;
-    height: auto;
+
+.stat-card {
+    background: (255, 255, 255, 0.025);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30vw;
+	color: white;
+	align-items: center;
+	justify-content: center;
 }
+
+.stat-number {
+    font-size: 2em;
+    color: white;
+}
+
+.stat-text {
+    color: white;
+}
+
 
 
 .container {

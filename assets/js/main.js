@@ -21,6 +21,42 @@
 			xsmall:	'(max-width: 480px)'
 		});
 
+		document.addEventListener("DOMContentLoaded", function() {
+			animateValue("stat-courses", 0, 300, 2000, '+');
+			animateValue("stat-clients", 0, 1000, 2000, '+');
+			animatePercentage("stat-safety", 0, 100, 2000); // Aici nu este necesar pentru că este un procentaj
+		});
+
+		function animateValue(id, start, end, duration, prefix = '') {
+			var range = end - start;
+			var current = start;
+			var increment = end > start? 1 : -1;
+			var stepTime = Math.abs(Math.floor(duration / range));
+			var obj = document.getElementById(id);
+			var timer = setInterval(function() {
+				current += increment;
+				obj.textContent = prefix + current; // Adăugăm prefixul la text
+				if (current == end) {
+					clearInterval(timer);
+				}
+			}, stepTime);
+		}
+
+		function animatePercentage(id, start, end, duration) {
+			var range = end - start;
+			var current = start;
+			var increment = end > start? 1 : -1;
+			var stepTime = Math.abs(Math.floor(duration / range));
+			var obj = document.getElementById(id);
+			var timer = setInterval(function() {
+				current += increment;
+				obj.textContent = current + "%";
+				if (current == end) {
+					clearInterval(timer);
+				}
+			}, stepTime);
+		}
+
 		$('a[href^="#"]').on('click', function(event) {
 			var target = $(this.getAttribute('href'));
 			if( target.length ) {

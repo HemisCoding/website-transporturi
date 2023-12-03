@@ -65,6 +65,38 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
+.video-container {
+    width: 100%; /* sau orice altă lățime */
+    height: auto; /* pentru păstrarea proporției videoclipului */
+    position: relative; /* dacă este necesar pentru poziționarea în pagina */
+}
+video {
+    width: 100%;
+    height: auto;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
+  .container li {
+    flex: 0 0 30%; /* Fiecare element va ocupa 30% din lățimea container-ului */
+    margin-bottom: 10px; /* Spatiu intre elementele listei */
+    background-color: rgba(161, 159, 159, 0.025); /* O culoare de fundal pentru vizualizare */
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .container li:nth-child(7) {
+    flex: 0 0 100%; /* Ultimul element va ocupa întreaga lățime */
+    text-align: center;
+  }
+
+
 .contact-button {
 	background-color: rgba(255, 255, 255, 0.025); /* Schimbă culoarea de fundal a butonului */
 	color: white; /* Textul butonului să fie alb */
@@ -81,6 +113,38 @@ input::-moz-focus-inner {
   
   .contact-button:hover {
 	background-color: rgba(161, 159, 159, 0.025); /* Schimbă culoarea de fundal a butonului când este hover */
+  }
+
+  .header {
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  .card {
+    background-color: rgba(161, 159, 159, 0.025);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    margin: 10px;
+    padding: 20px;
+    width:400px;
+    text-align: center;
+  }
+  .card img {
+    width: 200px;
+    height: 200px;
+  }
+  .card h3 {
+    margin: 10px 0 5px;
+  }
+  .card p {
+    margin: 5px 0;
+    color: #666;
   }
   
 

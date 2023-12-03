@@ -6,6 +6,7 @@
 
 (function($) {
 
+
 	var	$window = $(window),
 		$body = $('body'),
 		$header = $('#header'),
@@ -19,6 +20,16 @@
 			small:	'(max-width: 736px)',
 			xsmall:	'(max-width: 480px)'
 		});
+
+		$('a[href^="#"]').on('click', function(event) {
+			var target = $(this.getAttribute('href'));
+			if( target.length ) {
+			  event.preventDefault();
+			  $('html, body').stop().animate({
+				scrollTop: target.offset().top
+			  }, 1000);
+			}
+		  });
 
 	// Play initial animations on page load.
 		$window.on('load', function() {

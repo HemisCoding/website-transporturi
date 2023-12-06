@@ -49,7 +49,7 @@
 							<a href="#footer" class="special">Contactează-ne</a>	
 							<div class="stats-container">
 								<div class="stat-card">
-									<div class="stat-number" id="stat-courses">300</div>
+									<div class="stat-number" id="stat-courses">300+</div>
 									<div class="stat-text">curse</div>
 								</div>
 								<div class="stat-card">
@@ -64,6 +64,24 @@
 						</div>
 					</section>
 
+					<button class="message-icon" onclick="toggleChat()">
+						<i class="fa fa-comments" aria-hidden="true"></i> <!-- Înlocuiește cu un <img> dacă nu folosești Font Awesome -->
+					  </button>
+					  
+					<!-- Buton Chat WhatsApp -->
+					<div class="chat-container">
+						<!-- Header-ul container-ului de chat -->
+						<div class="chat-header">
+							Pentru programări ne puteți contacta la numărul afișat mai jos.
+						</div>
+					
+					  
+						<!-- Footer-ul container-ului de chat -->
+						<div class="chat-footer">
+							+40 754 557 939
+						</div>
+					  </div>
+
 
 					
 						<!-- Four -->
@@ -74,19 +92,19 @@
 									<article>
 										<a href="#" class="image"><img src="images/1.jpeg" alt="" /></a>
 										<h3 class="major">Transport Colete</h3>
-										<p>Începând de la 20 euro.</p>
+										<p>Începând de la 25 euro.</p>
 										<a href="#footer" class="special">Contaceza-ne!</a>
 									</article>
 									<article>
 										<a href="#" class="image"><img src="images/3.jpeg" alt="" /></a>
 										<h3 class="major">Transport persoane</h3>
-										<p>Începând de la 100 EURO</p>
+										<p>Începând de la 120 EURO</p>
 										<a href="#footer" class="special">Contactează-ne</a>
 									</article>
 									<article>
 										<a href="#" class="image"><img src="images/2.jpeg" alt="" /></a>
 										<h3 class="major">Transport autoturisme</h3>
-										<p>Începând de la 250 euro.</p>
+										<p>Începând de la 500 euro.</p>
 										<a href="#footer" class="special">Contactează-ne</a>
 									</article>
 								</section>
@@ -215,6 +233,11 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>		function toggleChat() {
+				var chatContainer = document.querySelector('.chat-container');
+				chatContainer.style.display = chatContainer.style.display === 'block' ? 'none' : 'block';
+			  }</script>
 
 
 	</body>

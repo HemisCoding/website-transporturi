@@ -92,7 +92,68 @@ input::-moz-focus-inner {
     color: white;
 }
 
+  /* Stilizarea containerului de chat */
+  .chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    z-index: 1000;
+	display: none;
 
+  }
+
+  /* Stilizarea header-ului chatului */
+  .chat-header {
+    background-color: #009688;
+    color: #fff;
+    padding: 20px;
+  }
+
+  /* Stilizarea butonului de suport */
+  .support-button {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Stilizarea textului de sub buton */
+  .chat-footer {
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-size: 20px;
+    color: #666;
+  }
+
+    /* Stilizarea butonului flotant pentru icon-ul de mesaj */
+	.message-icon {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background: #009688;
+		color: white;
+		text-align: center;
+		line-height: 60px;
+		cursor: pointer;
+		z-index: 1001; /* Mai mare decât container-ul de chat pentru a se afișa deasupra */
+		box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+		border: none;
+		outline: none;
+	  }
 
 .container {
     display: flex;

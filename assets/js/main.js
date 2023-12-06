@@ -26,6 +26,7 @@
 			animateValue("stat-clients", 0, 1000, 2000, '+');
 			animatePercentage("stat-safety", 0, 100, 2000); // Aici nu este necesar pentru că este un procentaj
 		});
+		
 
 		function animateValue(id, start, end, duration, prefix = '') {
 			var range = end - start;
@@ -35,7 +36,7 @@
 			var obj = document.getElementById(id);
 			var timer = setInterval(function() {
 				current += increment;
-				obj.textContent = prefix + current; // Adăugăm prefixul la text
+				obj.textContent = current + prefix; // Adăugăm prefixul la text
 				if (current == end) {
 					clearInterval(timer);
 				}
